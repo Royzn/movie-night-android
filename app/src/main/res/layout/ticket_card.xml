@@ -1,0 +1,80 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+
+    <!-- Movie Image -->
+    <ImageView
+        android:id="@+id/imageMovie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:src="@tools:sample/avatars"/>  <!-- keep aspect ratio -->
+
+    <!-- Ticket ID -->
+    <TextView
+        android:id="@+id/textTicketId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ticket ID: 12345"
+        android:textSize="14sp"
+        android:textColor="#666"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/imageMovie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Movie Name -->
+    <TextView
+        android:id="@+id/textMovieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Movie Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/textTicketId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Selected Showtime -->
+    <TextView
+        android:id="@+id/textSelectedShowtime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Showtime: 7:00 PM"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/textMovieName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Quantity -->
+    <TextView
+        android:id="@+id/textQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quantity: 2"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/textSelectedShowtime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- View Details Button -->
+    <Button
+        android:id="@+id/buttonViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Ticket Details"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textQuantity"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
